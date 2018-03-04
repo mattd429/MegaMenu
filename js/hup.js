@@ -88,11 +88,32 @@ $(document).ready(function() {
  // depending on the window size
  // it will show all 3 blog post
  // or 2 or 1
+ // can be anything
  (function() {
    let $window = $(window),
        flexslider = { vars:{} };
    function getGridSize() {
-     
+     // set the window size for viewport
+     return (window.innerWidth < 600) ? 1 :
+     (window.innerWidth < 992) ? 2 :
+     (window.innerWidth < 2000) ? 3 :
+     (window.innerWidth < 1200) ? 3 : 3;
    }
- })
+  
+  // webpage let's say you want a blog section
+  // use the flexslider to add some animation
+  // let the values for our flexSlider
+  $('.blog-post-caresoul').flexslider({
+    animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    move: 1,
+    controlNav: true,
+    minItems: getGridSize(),
+    maxItems: getGridSize()
+  });
+  
+ }());
+ 
 })
