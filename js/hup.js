@@ -84,4 +84,15 @@ $(document).ready(function() {
  $('.dropdown').mouseleave(function(){
    $(this).removeClass('open');
  });
+ // this function is determine the viewport
+ // depending on the window size
+ // it will show all 3 blog post
+ // or 2 or 1
+ (function() {
+   let $window = $(window),
+       flexslider = { vars:{} };
+   function getGridSize() {
+     
+   }
+ })
 })
