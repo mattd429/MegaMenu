@@ -65,4 +65,23 @@ $(document).ready(function() {
       }
     });
   });
+ 
+ // another custom product accordian jquery
+ // when a tab is clicked, find the css class .semuopen
+ // in hup.css
+ $('.semuopen').click(function(){
+   // remove headmenu
+   $('.semuopen').removeClass('headmenu');
+   $(this).addClass('headmenu');
+ });
+ // drop the menu down when mouse is hovered over menu
+ $('.dropdown').mouseender(function(){
+   // add the the css class .open to
+   // open navbar
+ });
+ // when the mouse leaves dropdown
+ // remove the navbar as open.
+ $('.dropdown').mouseleave(function(){
+   $(this).removeClass('open');
+ });
 })
