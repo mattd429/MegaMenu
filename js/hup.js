@@ -26,10 +26,7 @@ $(document).ready(function() {
   
   
   $('.custom').on('click', function() {
-  
-    $('.prdqty').show();
-    
-    $('#addToCart').show();
+ 
   });
   
   $('.customclick').on('click', function() {
