@@ -116,4 +116,19 @@ $(document).ready(function() {
   
  }());
  
+ // if the window in viewport is greater than 768px
+ if ( $(window).width() > 768) {
+   
+ }
+ else {
+   // we will call to a customer-service toggle
+   // you can call what ever you like. 
+   // basically if in mobile view toggle this.
+   $('#customer-service').click(function() {
+     // use our hup.css to create some style
+     $('#hup_customer-service').toggle('fast');
+   });
+   $()
+ }
+ 
 })
