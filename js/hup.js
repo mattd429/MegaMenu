@@ -128,7 +128,28 @@ $(document).ready(function() {
      // use our hup.css to create some style
      $('#hup_customer-service').toggle('fast');
    });
-   $()
+  
  }
+ if ( $(window).width() > 768) {
+ 
+ }
+ else {
+   // context on mouse-click find the selector class hup_information
+   // .toggle(), display or hide the macthing elements.
+   $('#information').click(function() {
+     $('#hup_information').toggle('fast');
+   });
+  
+ }
+ if ( $(window).width() > 768) {
+   
+ }
+ else {
+   $('#in_touch').click(function() {
+     $('#in_touch_open').toggle('fast');
+   });
+ }
+ 
+ $
  
 })
