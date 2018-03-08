@@ -150,6 +150,8 @@ $(document).ready(function() {
    });
  }
  
- $
+ $('#customer-service').click(function() {
+   
+ })
  
 })
