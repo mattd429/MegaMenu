@@ -126,7 +126,7 @@ $(document).ready(function() {
    // basically if in mobile view toggle this.
    $('#customer-service').click(function() {
      // use our hup.css to create some style
-     $('#hup_customer-service').toggle('fast');
+     $('#main_customer-service').toggle('fast');
    });
   
  }
@@ -137,7 +137,7 @@ $(document).ready(function() {
    // context on mouse-click find the selector class hup_information
    // .toggle(), display or hide the macthing elements.
    $('#information').click(function() {
-     $('#hup_information').toggle('fast');
+     $('#main_information').toggle('fast');
    });
   
  }
