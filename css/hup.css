@@ -1,2 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Paaji');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+.hup_desc_outer
+{
+  postion: relative;
+  height: 275px;
+}
