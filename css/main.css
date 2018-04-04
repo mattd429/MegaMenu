@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Paaji');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
-.hup_desc_outer
+.main_desc_outer
 {
   postion: relative;
   height: 275px;
 }
-.hup_desc ul {
+.main_css_desc ul {
   margin: 0 0 0;
 }
-.hup_desc {
+.main_desc {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -20,7 +20,7 @@
 .section-header-title {
   font-size: 26px;
 }
-.hup_uppercase {
+.main_uppercase {
   padding:5px 0;
 }
 
@@ -29,12 +29,19 @@
   text-align:center;
 }
 
-.hup_display_24 {
+.main_display_24 {
   width:24%;
 }
 
+/* calling multiple id and class in a given div tag(s)*/
 #productThumbs #owl-featured_thumbs .owl-nav .owl-prev{top:26%}
 .product-photo-thumbs a img{max-height:60px;}
 .add-to-cart-form .quick_cart {
-
+  display: inline-block !important;
+  margin: 0 auto;
+}
+.quick-btn_more {
+  display: inline-block;
+  width: 100%;
+  position: relative;
 }
