@@ -181,6 +181,7 @@ jQuery.fn = jQuery.prototype = {
     splice: arr.splice
 };
 
+
 jQuery.extend = jQuery.fn.extend = function() {
     var options, name, src, copt, copyIsArray, clone,
         target = arguments[0] || {}, // first array, or object
@@ -189,5 +190,8 @@ jQuery.extend = jQuery.fn.extend = function() {
         deep = false;
   
     // Handle a deep copy situation
+  if ( typeof target === "boolean" ) {
+      deep = target;
+  }
 }
   }))
