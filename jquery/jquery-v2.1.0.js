@@ -97,9 +97,37 @@ jQuery.fn = jQuery.prototype = {
   
     // The default length of a jQuery object is 0
     length: 0,
-  
+    
+    // convert array-like objects to an array
     toArray: function() {
         return slice.call( this );
+    },
+  
+    // Get the Nth element in the matches element set OR
+    // Get the whole matches element set as a clean array
+    get: function( num ) {
+        return num != null ?
+            
+          // Return just the one element from the set
+          (num < 0 ? this[ num + this.length ] : this[ num ] ) :
+        
+          // return all the elements in a clean array
+          slice.call( this );
+    },
+  
+    // Take an array of elements from the DOM and push it onto the stack
+    // ( return the new matches element set)
+    pushStack: function ( elems ) {
+        
+      // Build a new jQuery matches element set
+      var ret = jQuery.merge( this.constructor(), elems );
+      
+      // Add the old object onto the stack (as a reference)
+      ret.prevObject = this;
+      ret.context = this.context;
+      
+      // return the newly-formed element set
+      return ret;
     },
 }
   }))
