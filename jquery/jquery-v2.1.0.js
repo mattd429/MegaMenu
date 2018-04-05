@@ -129,5 +129,20 @@ jQuery.fn = jQuery.prototype = {
       // return the newly-formed element set
       return ret;
     },
+  
+    // Execute a callback for every element in the matched set.
+    // (You can seed the arguments with an array of args, but this is
+    // only used internally.)
+    each: function( callback, args ) {
+      return jQuery.each( this, callback, args );
+    },
+  
+    // pass each element in the current matches set through a function
+    // producing a new jQuery object containing the return values.
+    map: function( callback ) {
+      return this.pushStack( jQuery.map( this, function( elem, i ) {
+          return callback.call( elem, i, elem );
+      }));
+    } 
 }
   }))
