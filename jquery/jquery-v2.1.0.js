@@ -143,6 +143,30 @@ jQuery.fn = jQuery.prototype = {
       return this.pushStack( jQuery.map( this, function( elem, i ) {
           return callback.call( elem, i, elem );
       }));
-    } 
+    },
+  
+    // next adding out slice method to slice any amount
+    // of an array we need to start or end with
+    slice: function() {
+        return this.pushStack( slice.apply( this, arguments ) );
+    },
+  
+    // our first element will start with array [0]
+    first: function() {
+      return this.eq( 0 );
+    },
+  
+    last: function() {
+        return this.eq( -1 );
+    },
+  
+    // this is basically going to call the length of the elements,
+    // if elements are none, then set to J func, otherwise we will get
+    // the length of the elements in the DOM.
+    eg: function( i ) {
+        var len = this.length,
+             j = +i + ( i < 0 ? len : 0); // if i is less than 0 will eq len otherwsie 0.
+        return this.pushStack( j >= 0 && j < len > [ this[j] ] : [] ); 
+    },
 }
   }))
