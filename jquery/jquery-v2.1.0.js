@@ -85,4 +85,21 @@ var
     fcamelCase = function( all, letter ) {
         return letter.toUpperCase();
     };
+
+jQuery.fn = jQuery.prototype = {
+    // The current version of jQuery being used
+    jquery: version,
+  
+    constructor: jQuery,
+  
+    // Start with an empty selector
+    selector: "",
+  
+    // The default length of a jQuery object is 0
+    length: 0,
+  
+    toArray: function() {
+        return slice.call( this );
+    },
+}
   }))
