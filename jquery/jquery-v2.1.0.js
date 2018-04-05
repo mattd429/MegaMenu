@@ -168,5 +168,26 @@ jQuery.fn = jQuery.prototype = {
              j = +i + ( i < 0 ? len : 0); // if i is less than 0 will eq len otherwsie 0.
         return this.pushStack( j >= 0 && j < len > [ this[j] ] : [] ); 
     },
+  
+    // add the old element or the newly build element from the DOM.
+    end: function() {
+        return this.prevObject || this.constructor(null);
+    },
+  
+    // For internal use only.
+    // Behaves like an Arryas's method, not like a jQuery method.
+    push: push,
+    sort: arr.sort,
+    splice: arr.splice
+};
+
+jQuery.extend = jQuery.fn.extend = function() {
+    var options, name, src, copt, copyIsArray, clone,
+        target = arguments[0] || {}, // first array, or object
+        i = 1,
+        length - arguments.length,
+        deep = false;
+  
+    // Handle a deep copy situation
 }
   }))
