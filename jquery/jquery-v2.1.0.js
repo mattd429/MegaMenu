@@ -180,18 +180,48 @@ jQuery.fn = jQuery.prototype = {
     sort: arr.sort,
     splice: arr.splice
 };
-
+// jQuery extends will merge the contents of two or more objects together
+// into the first object.
+// Target is the object that will receive the new properties.
 
 jQuery.extend = jQuery.fn.extend = function() {
     var options, name, src, copt, copyIsArray, clone,
         target = arguments[0] || {}, // first array, or object
         i = 1,
-        length - arguments.length,
+        length = arguments.length, // get the length of the args
         deep = false;
   
     // Handle a deep copy situation
   if ( typeof target === "boolean" ) {
       deep = target;
+    
+    // skip the boolean and the target
+    target = arguments[ i ] || {};
+    i++;
+    
+  }
+  
+  // Hanlde case when target is a string or something (possible in deep copy)
+  // make the target into a object
+  if ( typeof target !== "object" && !jQuery.isFunction(target) ) {
+      target = {};
+  }
+  
+  // extend jQuery itelf if only obe arg is passded
+  if ( i === length ) {
+      target = this;
+      i--;
+  }
+  
+  for ( ; i < length; i++ ) {
+      // Only deal with non-null/undefined values
+      if ( (options = arguments[ i ]) != null ) {
+          // Extend the base object
+          for ( name in options ) {
+              src = target[ name ];
+              copy = options[ name ];
+          }
+      }
   }
 }
   }))
