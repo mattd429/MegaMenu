@@ -1,15 +1,15 @@
 /*!
- * jQuery JavaScript Library v2.1.0
- * http://jquery.com/
+ * jQuery JavaScript Library v3.3.1
+ * https://jquery.com/
  *
  * Includes Sizzle.js
- * http://sizzlejs.com/
+ * https://sizzlejs.com/
  *
- * Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors
+ * Copyright JS Foundation and other contributors
  * Released under the MIT license
- * http://jquery.org/license
+ * https://jquery.org/license
  *
- * Date: 2014-01-23T21:10Z
+ * Date: 2018-01-20T17:24Z
  */
 
 (function( global, factory ) {
@@ -39,7 +39,7 @@
 // the stack via arguments.caller.callee and Firefox dies if
 // you try to trace through "use strict" call chains. (#13335)
 // Support: Firefox 18+
-//
+"use strict";
   
 var arr = [];
   
