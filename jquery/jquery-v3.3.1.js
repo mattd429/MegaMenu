@@ -13,6 +13,8 @@
  */
 
 (function( global, factory ) {
+  
+  "use strict"; // making it easier to write secure js
 
   if ( typeof module === "object" && typeof module.exports === "object" ) {
       // For CommonJS and CommonJS-Like environments where a proper window is present,
@@ -35,13 +37,16 @@
 // Pass this is window is not defined yet  
 }(typeof window !== "undefined" ? window : this, functon( window, noGlobal ) {
 
-// Can't do this because several apps including ASP.NET trace
-// the stack via arguments.caller.callee and Firefox dies if
-// you try to trace through "use strict" call chains. (#13335)
-// Support: Firefox 18+
+// Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
+// Throw exceptions when non-strict code (e.g. ASP.NET 4.5) accesses strict mode
+// arguments.calle.caller
 "use strict";
   
 var arr = [];
+  
+var document = window.document;
+  
+var getProto = Object.getPrototypeOf; // returns the value of an obj
   
 var slice = arr.slice;
   
