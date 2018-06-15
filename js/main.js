@@ -23,135 +23,279 @@
 
 $(document).ready(function() {
 
-  
-  
-  $('.custom').on('click', function() {
- 
+
+
+  $('').on('', function() {
+
+    // $('.prdqty').show();
+    //
+    // $('#addToCart').show();
+
+
+    //36632145802
+
+
+
+
+
+
   });
-  
-  $('.customclick').on('click', function() {
-  
-    let numberlet = $(this).data('let');
-    
-    
-    $('.mainbutton').data('variant-id',numberlet);
-    
-    $('.mainbutton').trigger('click');
-    
+
+
+
+  $('').on('', function() {
+
+
+    // let numberlet = $(this).data('let');
+
+
+
+
+    // $('.mainbutton').data('variant-id',numberlet);
+
+
+    //  alert($('.mainbutton').data('variant-id'));
+
+    // $('.mainbutton').trigger('click');
+
+
   });
-  
-  // for your product accordian Jquery
-  // this will allow for your products to pop-out when you
-  // click on each product.
-  
-  $(function() {
-    // When a tab is clicked, find the class hideSeekTab
-    // when it is clicked on start the function
-    $('.hideSeekTab').on('click', function() {
-      // If the one you clicked is open,
-      if ($(this).find('p').hasClass('open')) {
-        // then close it.
-        $('.hideSeekTab .open').slideToggle().removeClass('open');
-        $('.iconBox').removeClass('closed');
-        // otherwise,
-      } else {
-        // all all tabs.
-        $('.hideSeekTab .open').slideToggle().removeClass('open');
-        // and open the one you clicked
-        $(this).find('p').slideToggle().addClass('open');
-        $('.iconBox').removeClass('closed');
-        $(this).find('.iconBox').addClass('closed');
-        $(this).find('.iconBox').addClass('closed');
+
+
+
+
+
+  // $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  //
+  //   var $this = $(this),
+  //       label = $this.prev('label');
+  //
+  //   if (e.type === 'keyup') {
+  //     if ($this.val() === '') {
+  //       label.removeClass('active highlight');
+  //     } else {
+  //       label.addClass('active highlight');
+  //     }
+  //   } else if (e.type === 'blur') {
+  //     if( $this.val() === '' ) {
+  //       label.removeClass('active highlight');
+  //     } else {
+  //       label.removeClass('highlight');
+  //     }
+  //   } else if (e.type === 'focus') {
+  //
+  //     if( $this.val() === '' ) {
+  //       label.removeClass('highlight');
+  //     }
+  //     else if( $this.val() !== '' ) {
+  //       label.addClass('highlight');
+  //     }
+  //   }
+  //
+  // });
+  //
+  // $('.tab a').on('click', function (e) {
+  //
+  //   e.preventDefault();
+  //
+  //   $(this).parent().addClass('active');
+  //   $(this).parent().siblings().removeClass('active');
+  //
+  //   target = $(this).attr('href');
+  //
+  //   $('.tab-content > div').not(target).hide();
+  //
+  //   $(target).fadeIn(600);
+  //
+  // });
+
+
+
+  //   FOR PRODUCT ACCORDIAN JQUERY
+
+  // $(function() {
+  //   // when a tab is clicked
+  //   $('.hideSeekTab').on('click', function() {
+  //     // if the one you clicked is open,
+  //     if ($(this).find('p').hasClass('open')) {
+  //       // then close it.
+  //       $('.hideSeekTab .open').slideToggle().removeClass('open');
+  //       $('.iconBox').removeClass('closed');
+  //       // otherwise,
+  //     } else {
+  //       // close all tabs,
+  //       $('.hideSeekTab .open').slideToggle().removeClass('open');
+  //       // and open the one you clicked
+  //       $(this).find('p').slideToggle().addClass('open');
+  //       $('.iconBox').removeClass('closed');
+  //       $(this).find('.iconBox').addClass('closed');
+  //     }
+  //   });
+  // });
+
+  //   FOR PRODUCT ACCORDIAN JQUERY
+
+
+  $('.semuopen').click(function(){
+    $('.semuopen').removeClass('headmenu');
+    $(this).addClass('headmenu');
+  });
+  $('.dropdown').mouseenter(function(){
+    $(this).addClass('open');
+  });
+  $('.dropdown').mouseleave(function(){
+    $(this).removeClass('open');
+  });
+  (function() {
+    var $window = $(window),
+        flexslider = { vars:{} };
+    function getGridSize() {
+      return (window.innerWidth < 600) ? 1 :
+      (window.innerWidth < 992) ? 2 :
+      (window.innerWidth < 2000) ? 3 :
+      (window.innerWidth < 1200) ? 3 : 3;
+    }
+
+
+    $('.blog-post-caresoul').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 210,
+      itemMargin: 5,
+      move: 1,
+      controlNav:true,
+      minItems: getGridSize(),
+      maxItems: getGridSize()
+    });
+
+  }());
+
+  if ( $(window).width() > 768) {
+
+  }
+  else {
+    $( "#customer-service" ).click(function() {
+      $( "#main_customer-service" ).toggle( "fast" );
+    });
+
+  }
+  if ( $(window).width() > 768) {
+
+  }
+  else {
+    $( "#information" ).click(function() {
+      $( "#main_information" ).toggle( "fast" );
+    });
+
+  }
+  if ( $(window).width() > 768) {
+
+  }
+  else {
+    $( "#in_touch" ).click(function() {
+      $( "#in_touch_open" ).toggle( "fast" );
+    });
+  }
+
+  $('#customer-service').click(function() {
+    var $this = $(this);
+
+    if ($this.hasClass('active')) {
+      $this.removeClass();
+    } else if ($this.hasClass('active')) {
+      $this.removeClass('red').addClass('active');
+    } else {
+      $this.addClass('active');
+    }
+  });
+
+
+  $('#information').click(function() {
+    var $this = $(this);
+
+    if ($this.hasClass('active')) {
+      $this.removeClass();
+    } else if ($this.hasClass('active')) {
+      $this.removeClass('red').addClass('active');
+    } else {
+      $this.addClass('active');
+    }
+  });
+
+  $('#in_touch').click(function() {
+    var $this = $(this);
+
+    if ($this.hasClass('active')) {
+      $this.removeClass();
+    } else if ($this.hasClass('active')) {
+      $this.removeClass('red').addClass('active');
+    } else {
+      $this.addClass('active');
+    }
+  });
+
+
+
+  $("#play-video").click(function(){
+    $(this).toggleClass("main");
+  })
+
+  $("video").prop('muted', true);
+
+  $("#play-video").click( function (){
+    if( $("video").prop('muted') ) {
+      $("video").prop('muted', false);
+    } else {
+      $("video").prop('muted', true);
+    }
+  });
+
+  $('#mystyleModal').on('hidden.bs.modal', function() {
+    var $this = $(this).find('iframe'),
+        tempSrc = $this.attr('src');
+    $this.attr('src', "");
+    $this.attr('src', tempSrc);
+  });
+  $(".btn-play-channel").click(function(){
+    $(".btn-play-channel").toggleClass("play_movies");
+  });
+
+
+  $("#mute-video").click( function (){
+    if( $("video").prop('muted') ) {
+      $("video").prop('muted', false);
+    } else {
+      $("video").prop('muted', true);
+    }
+  });
+});
+
+$(document).ready(function() {
+  thumbnails = $('img[src*="/products/"]').not(':first');
+  if (thumbnails.length) {
+    thumbnails.bind('click', function() {
+      var arrImage = $(this).attr('src').split('?')[0].split('.');
+      var strExtention = arrImage.pop();
+      var strRemaining = arrImage.pop().replace(/_[a-zA-Z0-9@]+$/,'');
+      var strNewImage = arrImage.join('.')+"."+strRemaining+"."+strExtention;
+      if (typeof variantImages[strNewImage] !== 'undefined') {
+        productOptions.forEach(function (value, i) {
+          optionValue = variantImages[strNewImage]['option-'+i];
+          if (optionValue !== null && $('.single-option-selector:eq('+i+') option').filter(function() { return $(this).text() === optionValue }).length) {
+            $('.single-option-selector:eq('+i+')').val(optionValue).trigger('change');
+          }
+        });
       }
     });
-  });
- 
- // another custom product accordian jquery
- // when a tab is clicked, find the css class .semuopen
- // in hup.css
- $('.semuopen').click(function(){
-   // remove headmenu
-   $('.semuopen').removeClass('headmenu');
-   $(this).addClass('headmenu');
- });
- // drop the menu down when mouse is hovered over menu
- $('.dropdown').mouseender(function(){
-   // add the the css class .open to
-   // open navbar
- });
- // when the mouse leaves dropdown
- // remove the navbar as open.
- $('.dropdown').mouseleave(function(){
-   $(this).removeClass('open');
- });
- // this function is determine the viewport
- // depending on the window size
- // it will show all 3 blog post
- // or 2 or 1
- // can be anything
- (function() {
-   let $window = $(window),
-       flexslider = { vars:{} };
-   function getGridSize() {
-     // set the window size for viewport
-     return (window.innerWidth < 600) ? 1 :
-     (window.innerWidth < 992) ? 2 :
-     (window.innerWidth < 2000) ? 3 :
-     (window.innerWidth < 1200) ? 3 : 3;
-   }
-  
-  // webpage let's say you want a blog section
-  // use the flexslider to add some animation
-  // let the values for our flexSlider
-  $('.blog-post-caresoul').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 210,
-    itemMargin: 5,
-    move: 1,
-    controlNav: true,
-    minItems: getGridSize(),
-    maxItems: getGridSize()
-  });
-  
- }());
- 
- // if the window in viewport is greater than 768px
- if ( $(window).width() > 768) {
-   
- }
- else {
-   // we will call to a customer-service toggle
-   // you can call what ever you like. 
-   // basically if in mobile view toggle this.
-   $('#customer-service').click(function() {
-     // use our hup.css to create some style
-     $('#main_customer-service').toggle('fast');
-   });
-  
- }
- if ( $(window).width() > 768) {
- 
- }
- else {
-   // context on mouse-click find the selector class hup_information
-   // .toggle(), display or hide the macthing elements.
-   $('#information').click(function() {
-     $('#main_information').toggle('fast');
-   });
-  
- }
- if ( $(window).width() > 768) {
-   
- }
- else {
-   $('#in_touch').click(function() {
-     $('#in_touch_open').toggle('fast');
-   });
- }
- 
- $('#customer-service').click(function() {
-   
- })
- 
-})
+  }
+});
+$( document ).ready(function() {
+ $(window).scroll(function() {
+
+    if ($(this).scrollTop() > 50){
+      $('.function-header').addClass("content_fixed");
+    }
+    else{
+      $('.function-header').removeClass("content_fixed");
+    }
+  });  });
