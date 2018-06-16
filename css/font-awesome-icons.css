@@ -1,0 +1,130 @@
+/* SITE NAV */
+.site-nav--dropdown a:before{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content:"\f105";
+  margin-right:5px;
+  
+}
+
+/* BLOG */
+span.date:before{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content:"\f133";
+  margin-right:5px;
+}
+
+span.comment-icon a:before{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content:"\f0e6";
+  margin-right:5px;
+}
+
+
+/* OWL CAROUSEL */
+.owl-nav .owl-next:after {
+  font-family:'FontAwesome';
+  font-weight: normal;
+  content:"\f105";
+  font-size: 20px;
+}
+
+.owl-nav .owl-prev:after {  
+  font-family:'FontAwesome';
+  font-weight: normal;
+  content:"\f104";
+  font-size: 20px;
+}
+
+
+/* REMOVE ICON */
+.icon-x:before{
+ font-family:'FontAwesome';
+  font-weight: normal;
+  content:"\f00d";
+}
+
+/* FILTERS */
+.advanced-filter.active-filter a:after{
+  font-family:'FontAwesome';
+  font-weight: normal;
+  content:"\f00c";
+}
+
+ul.selected-filters .advanced-filter.active-filter a:after,
+.advanced-filter.active-filter a:hover:after{
+  font-family:'FontAwesome';
+  font-weight: normal;
+  content:"\f00d";
+}
+
+/* FANCYBOX */
+.fancybox-close:after{
+   background-image:none;
+   font-family:'FontAwesome';
+   font-weight: normal;
+   content:"\f00d";
+   font-size:30px;
+}
+
+
+/* FAQ page */
+.template-page-faq .main-content h3:before{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content:"\f059";
+  margin-right:10px;
+   font-size:20px;
+}
+
+
+.template-page-faq .main-content p:before{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content: "\f0eb";
+  margin-right:10px;
+   font-size:20px;
+}
+
+
+
+/* popup gallery arrows */
+
+.mfp-arrow-left:after{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content: "\f104";
+  margin-right:10px;
+  font-size:55px;
+  border:0;
+  color:#fff;
+}
+
+.mfp-arrow-left:before, .mfp-arrow-right:before{
+ border:0;
+}
+
+.mfp-arrow-right:after{
+  font-family:'FontAwesome';
+  font-weight:normal;
+  content: "\f105";
+  margin-right:10px;
+  font-size:55px;
+  border:0;
+  color:#fff;
+}
+
+
+/* Quick View loader */
+ .mfp-zoom-out.product-quick-view-zoom-out .mfp-content:before {
+    font-family:'FontAwesome';
+    content: "\f110";
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    position:absolute;
+    top:48%;
+    left:48%;
+    font-size:55px;
+  }
