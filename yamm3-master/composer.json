@@ -1,0 +1,12 @@
+  {
+    "name": "test/yamm3",
+    "description": "Yet another megamenu for Bootstrap 3.x",
+    "version": "1.1.0",
+	"keywords": ["bootstrap", "megamenu", "megadropdown"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Github User",
+        }
+    ],
+}
